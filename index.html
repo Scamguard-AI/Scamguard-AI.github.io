@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ScamGuard AI – Free scam detector. Paste emails, screenshots, or PDFs to instantly check for phishing, fake invoices, and fraud. AI-powered scam analysis.">
-    <meta name="keywords" content="scam detector, check if email is scam, phishing checker, fake invoice detector, scam analysis, free scam tool, AI scam detection, email scam checker">
-    <title>ScamGuard AI – Free Scam Detector | Check Email & Document Scams</title>
+    <meta name="description" content="Free scam email checker. ScamGuard AI instantly analyzes suspicious emails, fake invoices, PayPal phishing, Geek Squad scams, and more. Quick signup – paste your text now.">
+    <meta name="keywords" content="free scam email checker, detect phishing emails online, fake invoice scanner, PayPal phishing checker, Geek Squad scam detector, romance scam checker, free phishing tool">
+    <title>Free Scam Email Checker | ScamGuard AI – Detect Phishing & Fraud Instantly</title>
 
-    <!-- JSON-LD Schema Markup (speaks Google’s language) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -20,8 +19,8 @@
             "price": "0",
             "priceCurrency": "USD"
         },
-        "description": "AI-powered scam detection tool. Paste suspicious emails, text messages, PDFs, or screenshots to get an instant risk analysis.",
-        "url": "https://Scamguard-AI.github.io"
+        "description": "Free AI‑powered scam detection. Create a free account, then paste emails, texts, PDFs or screenshots to check for phishing, fake invoices, and social engineering attacks.",
+        "url": "https://scamguard-ai.github.io"
     }
     </script>
 
@@ -30,208 +29,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
             color: #e0e0e0;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
             padding: 20px;
         }
-
         .container {
-            max-width: 900px;
-            width: 100%;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 32px;
-            padding: 60px 40px;
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 900px; width: 100%; text-align: center;
+            background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-radius: 32px; padding: 60px 40px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.08);
         }
-
         .shield-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
+            font-size: 64px; margin-bottom: 20px;
             background: linear-gradient(135deg, #00c6ff, #0072ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 20px rgba(0, 114, 255, 0.5));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            filter: drop-shadow(0 0 20px rgba(0,114,255,0.5));
         }
-
         h1 {
-            font-size: 3rem;
-            font-weight: 800;
+            font-size: 3rem; font-weight: 800;
             background: linear-gradient(to right, #ffffff, #a0c4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 16px; letter-spacing: -0.5px;
         }
-
-        .subheadline {
-            font-size: 1.3rem;
-            color: #b0b0c0;
-            max-width: 600px;
-            margin: 0 auto 50px;
-            line-height: 1.7;
+        .hero-text {
+            font-size: 1.2rem; color: #b0b0c0; max-width: 700px; margin: 0 auto 40px; line-height: 1.7;
         }
-
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 24px;
-            text-align: left;
-            margin-bottom: 50px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px; text-align: left; margin-bottom: 50px;
         }
-
         .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 20px;
-            padding: 28px 22px;
-            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px; padding: 28px 22px; transition: all 0.3s ease;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            border-color: rgba(255, 255, 255, 0.12);
-        }
-
-        .feature-icon {
-            font-size: 28px;
-            margin-bottom: 14px;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .feature-card p {
-            color: #a0a0b0;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
+        .feature-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .feature-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+        .feature-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #ffffff; }
+        .feature-card p { color: #a0a0b0; line-height: 1.6; font-size: 0.95rem; }
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #0072ff, #00c6ff);
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            padding: 18px 42px;
-            border-radius: 60px;
-            margin-top: 10px;
-            box-shadow: 0 10px 30px rgba(0, 114, 255, 0.4), 0 4px 10px rgba(0, 198, 255, 0.2);
-            transition: all 0.3s ease;
-            letter-spacing: 0.3px;
+            display: inline-block; background: linear-gradient(135deg, #0072ff, #00c6ff);
+            color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: 700;
+            padding: 18px 42px; border-radius: 60px; margin-top: 10px;
+            box-shadow: 0 10px 30px rgba(0,114,255,0.4), 0 4px 10px rgba(0,198,255,0.2);
+            transition: all 0.3s ease; letter-spacing: 0.3px;
         }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 114, 255, 0.6), 0 4px 15px rgba(0, 198, 255, 0.3);
-        }
-
-        .cta-sub {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #707090;
-        }
-
-        .search-tags {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .search-tags p {
-            color: #8888aa;
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: #c0c0e0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 0.85rem;
-            color: #606090;
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 20px;
-            }
-            h1 {
-                font-size: 2.2rem;
-            }
-        }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,114,255,0.6); }
+        .cta-sub { margin-top: 20px; font-size: 0.9rem; color: #707090; }
+        .search-tags { margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .search-tags p { color: #8888aa; font-size: 0.9rem; margin-bottom: 16px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .tag { background: rgba(255,255,255,0.05); padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; color: #c0c0e0; border: 1px solid rgba(255,255,255,0.1); }
+        footer { margin-top: 50px; font-size: 0.85rem; color: #606090; text-align: center; }
+        .nav-links { margin-bottom: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: #a0c4ff; text-decoration: none; font-size: 0.95rem; }
+        .nav-links a:hover { color: #ffffff; }
+        @media (max-width: 600px) { .container { padding: 40px 20px; } h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="shield-icon">🛡️</div>
         <h1>ScamGuard AI</h1>
-        <p class="subheadline">
-            Enterprise‑grade scam detection that works in seconds. Paste any suspicious email, message, invoice, or document to instantly see if it's a threat – for free.
+        <p class="hero-text">
+            The smartest way to check if an email is a scam – for free. Our AI instantly analyzes suspicious messages, fake invoices, PayPal phishing, Geek Squad scams, romance scams, and more. Quick sign‑up (email or Google) gives you access to the scanner. Just paste your text and get an instant risk report.
         </p>
 
+        <div class="nav-links">
+            <a href="fake-invoice-scam-checker.html">Fake Invoice Checker</a>
+            <a href="paypal-phishing-checker.html">PayPal Phishing</a>
+            <a href="geek-squad-scam-checker.html">Geek Squad Scam</a>
+            <a href="romance-scam-detector.html">Romance Scam</a>
+            <a href="phishing-email-checker.html">Phishing Email</a>
+            <a href="blog/">Blog</a>
+        </div>
+
         <div class="features-grid">
-            <div class="feature-card">
-                <span class="feature-icon">⚡</span>
-                <h3>Instant AI Analysis</h3>
-                <p>Deep learning models scan for phishing patterns, malicious URLs, and social engineering tricks.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">📄</span>
-                <h3>PDF & Image Support</h3>
-                <p>Upload screenshots or scanned invoices – our OCR engine extracts text even from images. (Premium)</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔗</span>
-                <h3>Link Safety Evaluation</h3>
-                <p>Every URL is inspected for typosquatting, hidden redirects, and dangerous domains.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🔒</span>
-                <h3>100% Free Basic Scan</h3>
-                <p>No account required. Your data is never stored – privacy by design.</p>
-            </div>
+            <div class="feature-card"><span class="feature-icon">⚡</span><h3>Instant AI Analysis</h3><p>Deep learning models scan for phishing patterns, malicious URLs, and social engineering tricks.</p></div>
+            <div class="feature-card"><span class="feature-icon">📄</span><h3>PDF & Image Support</h3><p>Upload screenshots or scanned invoices – our OCR extracts text from images. (Premium $4.99/mo)</p></div>
+            <div class="feature-card"><span class="feature-icon">🔗</span><h3>Link Safety Evaluation</h3><p>Every URL is inspected for typosquatting, hidden redirects, and dangerous domains.</p></div>
+            <div class="feature-card"><span class="feature-icon">🔒</span><h3>100% Free Basic Scan</h3><p>Create a free account in seconds. Your data is never stored – privacy by design.</p></div>
         </div>
 
         <a href="https://alright435-scamguard-ai.hf.space/" target="_blank" rel="noopener" class="cta-button">
@@ -250,8 +132,6 @@
             </div>
         </div>
     </div>
-    <footer>
-        ScamGuard AI – Free online scam detector. No installation required.
-    </footer>
+    <footer>ScamGuard AI – Free online scam detector. No installation required.</footer>
 </body>
 </html>
